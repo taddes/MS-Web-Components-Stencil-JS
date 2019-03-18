@@ -57,3 +57,24 @@ customElements.define(')
 1st Arg - string of the name of the custom element, one word, seperated by a dash. CANNOT BE A SINGLE word
 to avoid overwriting elements. HAS TO HAVE A DASH. 
 Often have a prefix that has a unique name, with no chance of clashing names. Ex. tad-tooltip
+
+==========
+
+All elements will be made up of 'primitives', or pre-existing, standard HTML components, but are wholly defined of composed logic that encapsulates one component, made up of many. 
+
+============
+Custom Web Component Lifecycle
+------------
+
+Instantiation of component
+
+Element created -> constructor() (created in memory, not in DOM. Basic initializations)
+
+Element Attached to DOM -> connectedCallback() - Where you can start adding content 
+or accessing the DOM (DOM initializations)
+
+Element detached from DOM -> disconnectedCallback() -> cleanup work, HTTP request, 
+cancel
+
+Observed Attribute Updated -> attributeChangedCallback() -> listening for changes to attributes in your element,
+where you update data and DOM of component when attr change, once passed to element.
