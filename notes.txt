@@ -1,0 +1,59 @@
+Fundamentals of Web Components
+
+<my-tooltip text="Extra Info">What?</my-tooltip>
+
+============
+
+------------
+
+=============
+Custom HTML
+-------------
+
+"Custom HTML Element" -> 3 Core Elements
+1. Custom HTML Element - Register your own HTML tags.
+
+2. Shadow DOM specification - Features to create our own DOM tree, elements behind elements
+Hidden from the main DOM. Manage a seperate DOM node tree for your HTML elements, including
+scoped CSS styles
+
+3. Templates & Slots
+Let us define our own HTML structure, behind our custom element. Add flexible entry points (slots) 
+where we can pass in information from outside when used in an app. 
+
+4. HTML Imports
+Import HTML files into HTML files **NOT CONTINUED SPEC**
+
+=============
+Browser Supprt
+--------------
+webcomponents.org has entire browser support table
+caniuse.com also has list of custom elements
+
+
+============
+Core Custom Elements
+------------
+
+1. Autonomous Elements
+Independant of all HTML elements built into browser
+
+2. Extend Built-in Elements
+Extend functions of some elements into customs
+
+============
+Creating a Custom Element
+------------
+
+Create a class of your element via HTMLElement class
+class Tooltip extends HTMLElement {
+  constructor(){
+    ....
+  }
+}
+
+
+customElements.define(')
+1st Arg - string of the name of the custom element, one word, seperated by a dash. CANNOT BE A SINGLE word
+to avoid overwriting elements. HAS TO HAVE A DASH. 
+Often have a prefix that has a unique name, with no chance of clashing names. Ex. tad-tooltip
