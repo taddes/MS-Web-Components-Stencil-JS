@@ -93,3 +93,10 @@ Attributes                Properties
 Set in HTML/DOM         Set programatically on JS OBJ
 ========== Often, but not always linked to a propery ===========
 ========== Not necessarily in sync with linked propery ===========
+
+
+============
+Shadow DOM!
+------------
+
+
