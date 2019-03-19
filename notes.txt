@@ -78,3 +78,18 @@ cancel
 
 Observed Attribute Updated -> attributeChangedCallback() -> listening for changes to attributes in your element,
 where you update data and DOM of component when attr change, once passed to element.
+
+============
+Attributes vs. Properties 
+------------
+
+First of all, it's important to understand that the browser essentially "translates" your HTML code 
+to a tree of DOM nodes (= objects if you access them in JavaScript).
+
+DOM properties and HTML attributes CAN be related, but also don't have to!
+
+Attributes                Properties
+<imput value="...">     input.value = "..."
+Set in HTML/DOM         Set programatically on JS OBJ
+========== Often, but not always linked to a propery ===========
+========== Not necessarily in sync with linked propery ===========
