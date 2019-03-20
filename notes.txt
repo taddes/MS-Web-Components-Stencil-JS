@@ -98,5 +98,21 @@ Set in HTML/DOM         Set programatically on JS OBJ
 ============
 Shadow DOM!
 ------------
+Anything contained within a custom component should generally he hidden from standard DOM,
+as this could be a problem for styling and other side effects imposed by normal DOM.  
+->Best to create your own component DOM tree : our element should have its own DOM behind it,
+but is not directly connected to normal/light DOM.
 
+How?
+
+Within constructor, call: this.attachShadow({mode: 'open' })  'open' means accessible, 
+'closed' not accessible, but infrequently used.
+
+**Children then need to be appended to the shadowDOM at the end, not normal DOM! 
+Must use: this.shadowRoot.appendChid(child)**
+Appending or removing is done by this.shadowRoot.append....
+
+<slot> displays whatever you pass in between your opening and closing custom element tags.  
+
+Default -> anything you pass in between slot tags will be the default
 
