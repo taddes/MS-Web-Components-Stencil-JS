@@ -116,3 +116,6 @@ Appending or removing is done by this.shadowRoot.append....
 
 Default -> anything you pass in between slot tags will be the default
 
+============
+Extending standard HTML elements in your custom ones
+------------
